@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Magnifier : MonoBehaviour
 {
-    [SerializeField] private float scaleSpeed = 0.2f;
-    [SerializeField] private Vector3 maxScale = new Vector3(2, 2, 2);
+    [SerializeField] private float _scaleSpeed = 0.2f;
+    [SerializeField] private Vector3 _maxScale = new Vector3(2, 2, 2);
 
     void Update()
     {
-        if (transform.localScale.x < maxScale.x)
+        if (transform.localScale.x < _maxScale.x)
         {
-            transform.localScale += Vector3.one * scaleSpeed * Time.deltaTime;
+            transform.localScale += Vector3.one * _scaleSpeed * Time.deltaTime;
         }
     }
 }
